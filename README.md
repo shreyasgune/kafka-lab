@@ -165,6 +165,7 @@ kubectl logs kafka-producer-* -f
 [GIN-debug] GET    /status 
 [GIN-debug] Listening and serving HTTP on :8080
 gojira:another world pushed to broker[GIN] 2020/10/08 - 05:40:05 | 200 |  1.772857896s |       127.0.0.1 | POST     "/data?key=gojira&value=another%20world"
+```
 
 - Consumer
 ```
