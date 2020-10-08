@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka-consumer
+  template:
+    metadata:
+      labels:
+        app: kafka-consumer
+    spec:
+      containers:
+      - name: kafka-consumer
+        image: shreyasgune/kafka-consumer:latest
+        env:
+        - name: KAFKA_ADDR
+          value: "10.97.142.36"
+        - name: KAFKA_TOPIC
+          value: "test-sgune"
